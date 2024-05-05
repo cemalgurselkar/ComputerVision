@@ -1,0 +1,1 @@
+Some little projects i made while studying about compoter vision
