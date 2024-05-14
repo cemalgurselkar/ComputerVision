@@ -51,3 +51,10 @@ while True:
             break
 cap.release()
 cv2.destroyAllWindows()
+
+"""
+En önemli algoritmalardan birisidir. Burada, belirlediğimiz nesneyi rengi sayesinde tespit edebiliriyorz. HSV ve Kontur işlemleri sayesinde.
+Görüntüyü mavi renk için alt ve üst sınırlar belirleyip binary mask kullandık. Ardından beliren nesne için kontur işlemleri uyguladık.
+Ardından, nesnenin ortasına bir nokta yerleştirdik ve sonrasında her hareketini takip etmek için bir line çizdik. amaç, merkez her hareket ettiğinde  arkasından yeşil bir çizgi çizilecek, bu sayede nesne hareketi takip edilecek.
+
+"""

@@ -38,11 +38,19 @@ try:
     marker = cv2.watershed(coin_blur, marker)
 except Exception as e:
     print(f'Hata: {e}')
-
-contours, hierarchy = cv2.findContours(marker.copy(), cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
-for i in range(len(contours)):
-    if hierarchy[0][i][3] == -1:
-        cv2.drawContours(image, contours, i, (255, 0, 0), 3)
-
+try:
+    contours, hierarchy = cv2.findContours(marker.copy(), cv2.RETR_CCOMP,cv2.CHAIN_APPROX_SIMPLE)
+    for i in range(len(contours)):
+        if hierarchy[0][i][3] == -1:
+            cv2.drawContours(image, contours, i, (255, 0, 0), 3)
+except Exception as e:
+    print(f'Hata: {e}')
 cv2.imshow('Image', image)
 cv2.waitKey(0)
+
+"""
+Havza Algoritması:
+1. Resmin konturlarını bulmak
+2. watershed algoritması: küçük nesneleri cv2.morphologyEx ile kaldırma. cv2.distanceTransform ise her pikselin arka plan pikselin arasındaki mesafeyi hesaplar.
+3. 
+"""

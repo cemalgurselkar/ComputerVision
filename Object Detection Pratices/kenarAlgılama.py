@@ -11,3 +11,7 @@ print(low,high)
 edges = cv2.Canny(blurred_img,low,high) # kenarları çıkarma.
 cv2.imshow("image", edges)
 cv2.waitKey(0)
+
+"""
+Burada, blurlama ve canny işlemleri üzerine çalışım. Amaç bir fotoğrafın iskelet yapsını çıkarmak. Gürültüleri azaltmak için blurlama tekniği, iskelet yapısı içise canny tekniği kullandım.Kenarları algılamak için uygulanabilir bir yöntem.
+"""

@@ -18,5 +18,9 @@ for i in corners:
     x,y = i.ravel()
     cv2.circle(img,(x,y),3,(0,0,0),cv2.FILLED)
 cv2.imshow('img',dst)
-cv2.imshow('corners',dst2)
 cv2.waitKey(0)
+
+"""
+Köşe tespiti için kullanılan basit bir algoritma. Burada sudokunun köşelerini tespit etmek için cornerHarris fonksiyonu kullandık.
+cv2.dilate görüntüdeki nesnelerin genişliğini arttırmak için kullanılır.
+"""

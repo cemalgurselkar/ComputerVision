@@ -10,3 +10,7 @@ for (x,y,w,h) in face_rect:
 
 cv2.imshow('image',image)
 cv2.waitKey(0)
+
+"""
+Buradak Cascade kullanımı ile ilgili bir araştırma ve pratik yaptım. Nesne tespiti için (eğer hsv yöntemine gerek yoksa) gray üzerinden işlemler yapılacağı. 
+"""
